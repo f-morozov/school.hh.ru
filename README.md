@@ -1,1 +1,1 @@
-Solutions for HeadHunter programming school tasks (http://school.hh.ru)
+Solutions for [HeadHunter developer school](http://school.hh.ru) tasks 
