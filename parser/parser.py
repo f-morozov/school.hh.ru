@@ -15,7 +15,7 @@ class ParseError(Exception):
         """Return str with expr highlighting error position"""
         return '\n'.join((self._expr,
                           ' ' * self._pos + '^',
-                          '{0}: {1}'.format(self._pos, self.error)))
+                          'Error at {0}: {1}'.format(self._pos, self.error)))
 
 class Parser:
     """Parser for polynom expressions with one variable"""
@@ -30,7 +30,7 @@ class Parser:
         self.var_name = None
         res = self._parse_sum()
         if self._pos != len(self._expr):
-            self._raise_error("Unrecognized symbol")
+            self._raise_error("Unrecognized symbol '{0}'".format(self._cur()))
         return res
 
     def _skipspace(self):
