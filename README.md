@@ -1,0 +1,1 @@
+Solutions for HeadHunter programming school tasks (http://school.hh.ru)
