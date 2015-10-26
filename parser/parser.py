@@ -161,7 +161,10 @@ class Parser:
         while self._cur().isalpha():
             name += self._cur()
             self._step(skipspace=False)         
-        self._skipspace()   
+            if self.var_name and name == self.var_name:
+                break;
+        self._skipspace()
+
         if not name:
             return None
         if not self.var_name:
